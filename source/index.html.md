@@ -21,6 +21,8 @@ search: true
 
 ## Avatar
 
+Endpoint dependencies includes (Sharp, Validator, Moment, File-Type, SHA1)
+
 > Make sure to replace `xxxxxxxx` with your API key.
 
 ```shell
@@ -39,7 +41,7 @@ EOF
 // Check later
 ```
 
-> The above command returns JSON structured like this on success  (STATUS 200):
+> The above command returns JSON structured like this on success:
 
 ```json
 {
@@ -47,6 +49,15 @@ EOF
     "original": "https://cdn.blowoutandgo.com/wp-content/uploads/sites/2/2017/08/1542_avatar.jpg",
     "thumbnail": "https://cdn.blowoutandgo.com/wp-content/uploads/sites/2/2017/08/1542_avatar-150x150.jpg",
     "small": "https://cdn.blowoutandgo.com/wp-content/uploads/sites/2/2017/08/1542_avatar-90x90.jpg"
+}
+```
+
+> The above command returns JSON structured like this on failure:
+
+```json
+{
+    "status": "error",
+    "message": "File format not supported, use JPEG, PNG, TIFF, GIF and SVG"
 }
 ```
 
