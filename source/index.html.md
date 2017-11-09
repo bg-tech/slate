@@ -32,7 +32,8 @@ curl -0 -v -X POST "https://api.blowoutandgo.com/prod/upload/avatar" \
 -d @- << EOF
 {
     "user_id": 3239,
-    "base64_image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CA...
+    "base64_image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CA
+    ..."
 }
 EOF
 ```
