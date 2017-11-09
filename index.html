@@ -248,6 +248,8 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='upload'>Upload</h1><h2 id='avatar'>Avatar</h2>
+<p>Endpoint dependencies includes (Sharp, Validator, Moment, File-Type, SHA1)</p>
+
 <blockquote>
 <p>Make sure to replace <code>xxxxxxxx</code> with your API key.</p>
 </blockquote>
@@ -263,13 +265,21 @@ EOF
 </span></code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// Check later</span>
 </code></pre>
 <blockquote>
-<p>The above command returns JSON structured like this on success  (STATUS 200):</p>
+<p>The above command returns JSON structured like this on success:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"original"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://cdn.blowoutandgo.com/wp-content/uploads/sites/2/2017/08/1542_avatar.jpg"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"thumbnail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://cdn.blowoutandgo.com/wp-content/uploads/sites/2/2017/08/1542_avatar-150x150.jpg"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"small"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://cdn.blowoutandgo.com/wp-content/uploads/sites/2/2017/08/1542_avatar-90x90.jpg"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this on failure:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"error"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"File format not supported, use JPEG, PNG, TIFF, GIF and SVG"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request'>HTTP Request</h3>
 <p><code>POST https://api.blowoutandgo.com/prod/upload/avatar</code></p>
